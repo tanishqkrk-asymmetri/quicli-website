@@ -147,7 +147,7 @@ const team = [
       "https://r.mobirisesite.com/2305096/assets/images/team1-h_mlksgw19.jpg",
   },
   {
-    name: "Nanda Kishore",
+    name: "Nandagopal",
     role: "CTO",
     bio: "Leads technology and product systems across Quicli with deep execution focus.",
     image:
@@ -292,6 +292,7 @@ function TestimonialMarquee({ testimonials }: { testimonials: Testimonial[] }) {
 export function QuicliLanding() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeTeamMember, setActiveTeamMember] = useState<number | null>(null);
   const stepRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
@@ -915,52 +916,67 @@ export function QuicliLanding() {
             Meet the people building the future of healthcare.
           </motion.p>
           <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-16">
-            {team.map((member, idx) => (
-              <article
-                className="group reveal relative aspect-[9/12] cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl"
-                key={member.name}
-                style={{ animationDelay: `${idx * 80}ms` }}
-              >
-                {/* Image - visible by default */}
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={480}
-                  height={480}
-                  className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-                />
-                {/* Info overlay - hidden by default, revealed on hover */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-brand p-8 text-center text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 translate-y-4">
-                  <motion.p
-                    className="mb-3 text-sm font-bold uppercase tracking-widest text-[#e8e4f4]"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={fadeUpVariants}
+            {team.map((member, idx) => {
+              const isActive = activeTeamMember === idx;
+              return (
+                <article
+                  className="group reveal relative aspect-[9/12] cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+                  key={member.name}
+                  style={{ animationDelay: `${idx * 80}ms` }}
+                  onClick={() => setActiveTeamMember(isActive ? null : idx)}
+                >
+                  {/* Image - visible by default, hidden on hover (desktop) or tap (mobile) */}
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={480}
+                    height={480}
+                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 md:group-hover:opacity-0 ${isActive ? "opacity-0" : ""}`}
+                  />
+                  {/* Info overlay - revealed on hover (desktop) or tap (mobile) */}
+                  <div
+                    className={`absolute inset-0 flex flex-col items-center justify-center bg-brand p-8 text-center text-white transition-all duration-500 md:opacity-0 md:translate-y-4 md:group-hover:translate-y-0 md:group-hover:opacity-100 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
                   >
-                    {member.role}
-                  </motion.p>
-                  <motion.h3
-                    className="mb-4 text-3xl font-bold"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={fadeUpVariants}
-                  >
-                    {member.name}
-                  </motion.h3>
-                  <motion.p
-                    className="text-base leading-relaxed text-white/90"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={fadeUpVariants}
-                  >
-                    {member.bio}
-                  </motion.p>
-                </div>
-              </article>
-            ))}
+                    <motion.p
+                      className="mb-3 text-sm font-bold uppercase tracking-widest text-[#e8e4f4]"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: "-100px" }}
+                      variants={fadeUpVariants}
+                    >
+                      {member.role}
+                    </motion.p>
+                    <motion.h3
+                      className="mb-4 text-2xl md:text-3xl font-bold"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: "-100px" }}
+                      variants={fadeUpVariants}
+                    >
+                      {member.name}
+                    </motion.h3>
+                    <motion.p
+                      className="text-sm md:text-base leading-relaxed text-white/90"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: "-100px" }}
+                      variants={fadeUpVariants}
+                    >
+                      {member.bio}
+                    </motion.p>
+                  </div>
+                  {/* Tap hint - mobile only */}
+                  {!isActive && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:hidden">
+                      <p className="text-white text-sm font-semibold">
+                        {member.name}
+                      </p>
+                      <p className="text-white/70 text-xs">Tap to read more</p>
+                    </div>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
