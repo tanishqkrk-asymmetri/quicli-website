@@ -518,7 +518,7 @@ export function QuicliLanding() {
       </section>
 
       <section className="section alt sec3-flow px-4 md:px-0" id="flow">
-        <div className="container">
+        <div className="/container">
           <div className="flow-grid">
             <ol className="flex flex-col md:flex-row gap-8 md:gap-16">
               {/* Sticky icon - hidden on mobile */}
@@ -643,7 +643,7 @@ export function QuicliLanding() {
       </section>
 
       <section className="section sec5-features" id="features">
-        <div className="container py-10 md:py-16">
+        <div className="/container py-10 md:py-16 flex justify-center items-center w-full">
           <div className="feature-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 md:px-16 gap-4 md:gap-9">
             <article className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl p-6 md:p-8 text-black">
               <motion.h3
@@ -709,7 +709,7 @@ export function QuicliLanding() {
         className="section pricing sec6-pricing bg-theme min-h-screen"
         id="pricing"
       >
-        <div className="container px-4 md:px-8">
+        <div className="/container px-4 md:px-8">
           <div className="w-full flex justify-center items-center flex-col py-10 md:py-16">
             <motion.h2
               className="section-title text-3xl md:text-6xl text-white font-bold mb-4 md:mb-6 text-center"
@@ -822,7 +822,7 @@ export function QuicliLanding() {
         className="section alt sec8-testimonials overflow-hidden bg-linear-to-b from-[#f7f5ff] to-[#edf1fb] py-10 md:py-16 px-4 md:px-8"
         id="testimonials"
       >
-        <div className="container mb-10">
+        <div className="/container mb-10">
           <motion.h2
             className="section-title text-[#7641e3]"
             initial="hidden"
@@ -851,7 +851,7 @@ export function QuicliLanding() {
         className="section cta sec9-try bg-brand text-white p-6 md:p-16"
         id="try"
       >
-        <div className="container cta-grid flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="/container cta-grid flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="reveal">
             <motion.h2
               className="text-3xl md:text-5xl font-bold mb-4 md:mb-6"
@@ -896,7 +896,7 @@ export function QuicliLanding() {
         className="section alt sec10-team bg-linear-to-b from-[#f7f5ff] to-white py-12 md:py-20"
         id="team"
       >
-        <div className="container">
+        <div className="/container">
           <motion.h2
             className="section-title mb-4 text-center text-theme text-2xl md:text-4xl font-bold"
             initial="hidden"
@@ -1005,7 +1005,7 @@ export function QuicliLanding() {
             Quick answers to common questions about Quicli.
           </motion.p>
         </div>
-        <div className="container max-w-3xl">
+        <div className="/container max-w-3xl">
           <div className="faq-list grid gap-4">
             {faqs.map((faq, idx) => (
               <motion.details
@@ -1049,7 +1049,7 @@ export function QuicliLanding() {
         className="section contact sec12-contact bg-theme py-12 md:py-20 text-[#e8e4f4] px-4 md:px-8"
         id="contact"
       >
-        <div className="container max-w-2xl px-4 md:px-8">
+        <div className="/container max-w-2xl px-4 md:px-8">
           <motion.h2
             className="mb-10 text-4xl font-bold tracking-tight md:text-6xl"
             initial="hidden"
@@ -1095,7 +1095,7 @@ export function QuicliLanding() {
         className="footer section sec13-footer bg-[#331C5E] py-10 md:py-16 text-white px-4 md:px-8"
         id="footer"
       >
-        <div className="container flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-16">
+        <div className="/container flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-16">
           <div className="space-y-6">
             <Image
               src="https://r.mobirisesite.com/2305096/assets/images/logo-h_mlhtbvih.png"
