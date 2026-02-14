@@ -1,0 +1,162 @@
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = 'color') {
+background-color: @bg-value;
+}
+& when (@bg-type = 'image') {
+background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+display: none;
+}
+.mbr-fallback-image {
+display: block;
+background-size: cover;
+background-position: center center;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+& when (@bg-type = 'video') {
+background-image: url(@fallBackImage);
+}
+}
+.items-wrapper {
+margin: 0 -17px;
+.item {
+padding: 0 17px;
+}
+}
+.item {
+margin-bottom: 34px;
+@media (max-width: 992px) {
+margin-bottom: 20px;
+&:last-child {
+margin-bottom: 0;
+}
+}
+}
+.title-wrapper {
+margin-bottom: 70px;
+@media (max-width: 992px) {
+margin-bottom: 30px;
+}
+.label-wrapper {
+.mbr-label {
+margin-bottom: 15px;
+}
+}
+.mbr-section-title {
+margin-bottom: 40px;
+@media (max-width: 992px) {
+margin-bottom: 20px;
+}
+}
+.mbr-text {
+margin-bottom: 0;
+}
+}
+.item-wrapper {
+padding: 45px;
+overflow: hidden;
+height: 100%;
+@media (max-width: 992px) {
+padding: 20px;
+}
+.card-box {
+.title-wrap {
+margin-bottom: 10px;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: space-between;
+@media (max-width: 992px) {
+display: block;
+}
+& when not (@showCardTitle) {
+display: block;
+}
+& when not (@showNumber) {
+display: block;
+}
+.item-title {
+margin-bottom: 0;
+}
+.item-number_1, .item-number_2, .item-number_3, .item-number_4 {
+margin-bottom: 0;
+@media (max-width: 992px) {
+margin-bottom: 10px;
+}
+}
+}
+.item-text {
+margin-bottom: 0;
+}
+.item-btn {
+margin-top: 20px;
+@media (max-width: 992px) {
+margin-top: 10px;
+}
+}
+}
+}
+.card_1 {
+background-color: @cardBg_1;
+}
+.card_2 {
+background-color: @cardBg_2;
+}
+.card_3 {
+background-color: @cardBg_3;
+}
+.card_4 {
+background-color: @cardBg_4;
+}
+.main-btn {
+width: 100%;
+.btn {
+padding: 60px 90px;
+width: 100%;
+margin-top: 0;
+margin-bottom: 0;
+@media (max-width: 992px) {
+padding: 30px;
+}
+&:hover, &:focus {
+transform: none !important;
+}
+}
+}
+.mbr-label {
+color: #3a353e;
+}
+.mbr-section-title {
+color: #3a353e;
+}
+.mbr-text {
+color: #3a353e;
+}
+.item-number_1 {
+color: #ffffff;
+}
+.item-number_2 {
+color: #ffffff;
+}
+.item-number_3 {
+color: #ffffff;
+}
+.item-number_4 {
+color: #ffffff;
+}
+.item-title {
+color: #ffffff;
+text-align: left;
+}
+.item-text {
+color: #3a353e;
+}
+.item-text, .item-btn {
+color: #ffffff;
+}

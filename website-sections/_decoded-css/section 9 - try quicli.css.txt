@@ -1,0 +1,65 @@
+& when not (@fullScreen) {
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+}
+& when (@bg-type = 'color') {
+background-color: @bg-value;
+}
+& when (@bg-type = 'image') {
+background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+display: none;
+}
+.mbr-fallback-image {
+display: block;
+background-size: cover;
+background-position: center center;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+& when (@bg-type = 'video') {
+background-image: url(@fallBackImage);
+}
+}
+.btn {
+padding: 1.5rem 5rem;
+border: 0 !important;
+@media (max-width: 767px) {
+padding: 1.5rem 3rem;
+}
+}
+& when (@reverseContent) {
+.row {
+flex-direction: row-reverse;
+}
+}
+.row {
+align-items: center;
+}
+img {
+border-radius: 2rem;
+}
+.image-wrapper {
+background: @imgbg;
+padding: 4rem 5rem;
+border-radius: 2rem;
+@media (max-width: 991px) {
+margin-top: 2rem;
+}
+@media (max-width: 767px) {
+padding: 1rem;
+}
+}
+.text-wrapper {
+@media (min-width: 992px) {
+padding: 0 2rem;
+}
+}
+.mbr-section-title {
+color: #ffffff;
+}
+.mbr-text, .mbr-section-btn {
+color: #3d2e7c;
+}

@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&amp; when not (@sticky) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-dropdown {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: relative !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when (@transparent) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-dropdown {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&amp; when (@sticky) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>z-index: 1000;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when not (@transparent) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: 110px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.navbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&amp; when (@fullWidth) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.container-fluid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding-left: 85px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding-right: 85px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 1640px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 65px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-right: 65px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 1440px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 45px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-right: 45px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 992px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-right: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.dropdown-item:before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: Moririse2 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>content: "\e966";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>left: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>top: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-right: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: inherit;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>vertical-align: middle;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transform: scale(0, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.25s ease-in-out;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.dropdown-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: none !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: @menuBgColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:hover, &amp;:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: @menuBgColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: @activeColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:hover span {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:first-child {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top-left-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top-right-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:last-child {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom-left-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom-right-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.nav-dropdown .link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0 0.3em !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0.667em 1em !important;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.nav-dropdown .link.dropdown-toggle::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-left: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 0.2rem;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.nav-link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: relative;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when not (@collapsed) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (min-width: 992px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-wrap: nowrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>max-width: 1600px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.iconfont-wrapper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: @iconsColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.3s ease-in-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>opacity: 0.5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.dropdown-menu, .navbar.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: @menuBgColor !important;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.nav-item:focus, .nav-link:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>outline: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.dropdown .dropdown-menu .dropdown-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.25s ease-in-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>right: 1.6rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.mbr-iconfont {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-right: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>vertical-align: sub;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: scale(1, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all 0.25s ease-in-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.collapsed {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.dropdown-menu .dropdown-item:before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.dropdown .dropdown-menu .dropdown-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0.235em 1.5em 0.235em 1.5em !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-height: 110px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-bottom: 1px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:not(.navbar-short) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when not (@transparent) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: @menuBgColor;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when (@transparent) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: rgba(red(@menuBgColor), green(@menuBgColor), blue(@menuBgColor), @opacity);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.dropdown-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 8px 3.2rem 8px 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-left: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-logo img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-collapse {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: flex-end;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;.collapsed {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav-item .nav-link::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>@media (min-width: 992px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&amp;:not(.navbar-short) .navbar-collapse when (@showLogo) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>max-height: ~"calc(98.5vh - @{logoSize}rem)";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-submenu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>left: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-item:after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>right: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-toggle[data-toggle="dropdown-submenu"]:after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-left: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 0.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-top: 0.35em solid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-right: 0.35em solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-left: 0.35em solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-bottom: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>top: 41%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>ul.navbar-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.dropdown-menu .dropdown-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0.25rem 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.icons-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-top: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-bottom: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width: 991px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav-item .nav-link::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-submenu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>left: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-item:after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>right: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.dropdown-toggle[data-toggle="dropdown-submenu"]:after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-left: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-top: 0.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-top: 0.35em solid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-right: 0.35em solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-left: 0.35em solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-bottom: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>top: 40%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-logo {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>height: 3rem !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>ul.navbar-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.dropdown-menu .dropdown-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 14px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-brand {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-shrink: initial;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-basis: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>word-break: break-word;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-right: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 80%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-toggler {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-basis: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.icons-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-top: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-bottom: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;.navbar-short {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: 96px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-brand {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 96px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: none !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: none !important;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar-brand {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-height: 96px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-shrink: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 10px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>word-break: break-word !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>z-index: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-caption {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: inherit !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 400;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:hover, &amp;:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: @activeColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-logo a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>outline: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>word-wrap: break-word !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>white-space: normal;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-brand {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-caption {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&amp;:hover, &amp;:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>color: @activeColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.dropdown-item.active, .dropdown-item:active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background-color: transparent;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar-expand-lg .navbar-nav .nav-link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.nav-dropdown .link.dropdown-toggle {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-right: 1.667em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;[aria-expanded="true"] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0.667em 1.667em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar.navbar-expand-lg .dropdown {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: @menuBgColor;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 3.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 992px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.dropdown-submenu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-left: 1px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar .dropdown.open &gt; .dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: block;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">ul.navbar-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (min-width: 991px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 2px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp; when (@collapsed) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 20px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar-buttons {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when not (@collapsed) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (min-width: 991px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: left;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 246px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>white-space: nowrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 575px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: auto !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">button.navbar-toggler {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>outline: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>height: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-self: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background-color: @menuBgColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: none !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: none !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hamburger span {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-right: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: @hamburgerColor;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:nth-child(1) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:nth-child(2) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:nth-child(3) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:nth-child(4) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">nav.opened .hamburger span {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:nth-child(1) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>opacity: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>right: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:nth-child(2) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform: rotate(45deg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: all 0.25s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:nth-child(3) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform: rotate(-45deg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: all 0.25s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp;:nth-child(4) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>opacity: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>right: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar-dropdown {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when (@sticky) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">a.nav-link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.icons-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-wrap: nowrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-left: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-right: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-top: 0.3rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-align: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">@media screen and (~'-ms-high-contrast: active'), (~'-ms-high-contrast: none') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 70px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-item .nav-link:hover::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 175%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: calc(100% ~"+" 2rem);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: -1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.navbar-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&amp; when not (@showButtons) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: flex-end;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.nav-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 6px 17px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: all 0.3s ease-in-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 3rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration: underline;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration-color: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: inherit !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: rotate(0);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:hover, &amp;:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: @activeColor !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration-color: @activeColor;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&amp;::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>color: inherit !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-link.show {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: rotate(180deg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.dropdown-menu {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: transparent !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: transparent !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&amp; when (@collapsed) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: flex-start !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: 100vh !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: flex-start !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-collapse {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 20px 0 5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&amp;:not(:first-child) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-top: 1px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.nav-link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 14px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-bottom: 4px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">@media (max-width: 991px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: flex-start !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar.opened {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: 100vh !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-direction: column !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: flex-start !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.navbar-collapse {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 20px 0 3rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.navbar-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&amp;:not(:first-child) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>border-top: 1px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.nav-link {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>padding: 14px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: 0 !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin-bottom: 4px !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.content-wrap {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-height: 110px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+</body>
+</html>

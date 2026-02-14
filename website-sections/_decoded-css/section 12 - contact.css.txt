@@ -1,0 +1,86 @@
+& when not (@fullScreen) {
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+}
+& when (@bg-type = 'color') {
+background-color: @bg-value;
+}
+& when (@bg-type = 'image') {
+background-image: url(@bg-value);
+}
+.row {
+align-items: center;
+}
+.image-wrapper {
+padding: 1rem;
+@media (max-width: 767px) {
+padding: 40px 1rem 1rem 1rem;
+}
+}
+.text-wrapper {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.header-text {
+width: 100%;
+margin-bottom: 20px;
+@media (max-width: 767px) {
+}
+}
+.label-text {
+width: 100%;
+color: #111111;
+margin-bottom: 0;
+}
+.mbr-section-title {
+width: 100%;
+margin-bottom: 8px;
+color: #e3d7fd;
+text-align: justify;
+}
+.mbr-text {
+color: #555555;
+width: 100%;
+margin-bottom: 12px;
+}
+.contacts-text {
+color: #111111;
+letter-spacing: inherit;
+margin-bottom: 20px;
+width: 100%;
+}
+.icons-menu {
+margin-left: -8px;
+margin-right: -8px;
+width: 100%;
+}
+.iconfont-wrapper {
+color: @iconsColor !important;
+&:hover {
+color: @primaryColor !important;
+}
+}
+.mbr-iconfont {
+padding: 5px 8px;
+font-size: 15px;
+}
+.mbr-fallback-image.disabled {
+display: none;
+}
+.mbr-fallback-image {
+display: block;
+background-size: cover;
+background-position: center center;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+& when (@bg-type = 'video') {
+background-image: url(@fallBackImage);
+}
+}
+.contacts-text, .icons-menu {
+color: #e3d7fd;
+text-align: justify;
+}

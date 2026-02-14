@@ -1,0 +1,128 @@
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = 'color') {
+background-color: @bg-value;
+}
+& when (@bg-type = 'image') {
+background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+display: none;
+}
+.mbr-fallback-image {
+display: block;
+background-size: cover;
+background-position: center center;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+& when (@bg-type = 'video') {
+background-image: url(@fallBackImage);
+}
+}
+.card-wrapper {
+display: flex;
+padding: 64px;
+background-color: @containerBg;
+@media (max-width: 992px) {
+padding: 20px;
+display: block;
+}
+.content-wrapper {
+display: inline-flex;
+width: 65%;
+@media (max-width: 992px) {
+width: 100%;
+}
+.title-wrapper {
+width: 100%;
+}
+.mbr-section-title {
+margin-bottom: 60px;
+@media (max-width: 992px) {
+margin-bottom: 40px;
+}
+}
+.panel-group {
+.card {
+position: relative;
+padding: 40px 0;
+background-color: transparent;
+border-bottom: 1px solid @border;
+border-radius: 0 !important;
+transition: all 0.3s ease-in-out;
+@media (max-width: 992px) {
+padding: 20px 0;
+}
+&:hover {
+border-bottom: 1px solid @activeColor;
+}
+.card-header {
+background-color: transparent;
+border: none;
+border-radius: 0;
+padding: 0;
+.panel-title {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+.panel-title-edit {
+margin-bottom: 0;
+}
+.icon-wrapper {
+width: 44px;
+height: 44px;
+min-width: 44px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin-left: 14px;
+transition: all 0.3s ease-in-out;
+border-radius: 100%;
+background-color: @iconBg;
+.mbr-iconfont {
+font-size: 22px;
+transition: all 0.3s ease-in-out;
+color: @icon;
+}
+}
+&:not(.collapsed) {
+.icon-wrapper {
+.mbr-iconfont {
+transform: rotate(180deg);
+}
+}
+}
+}
+}
+.panel-collapse {
+.panel-body {
+margin-top: 40px;
+@media (max-width: 992px) {
+margin-top: 20px;
+}
+.panel-text {
+display: inline-flex;
+width: 80%;
+margin-bottom: 0;
+@media (max-width: 992px) {
+width: 100%;
+}
+}
+}
+}
+}
+}
+}
+}
+.mbr-section-title {
+color: #0f0f0f;
+}
+.panel-title-edit {
+color: #0f0f0f;
+}
+.panel-text {
+color: #666666;
+}

@@ -1,0 +1,129 @@
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = "color") {
+background: @bg-value;
+}
+& when (@bg-type = "image") {
+background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+display: none;
+}
+.mbr-fallback-image {
+display: block;
+background-size: cover;
+background-position: center center;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+& when (@bg-type = 'video') {
+background-image: url(@fallBackImage);
+}
+}
+.card {
+min-height: 500px;
+}
+.content-wrap {
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+height: 100%;
+}
+.img1 {
+background-image: url(@img1);
+background-size: cover;
+background-position: center;
+}
+.img2 {
+background-image: url(@img2);
+background-size: cover;
+background-position: center;
+}
+.img3 {
+background-image: url(@img3);
+background-size: cover;
+background-position: center;
+}
+.card-wrap {
+position: relative;
+height: 100%;
+overflow: hidden;
+.image-wrap {
+position: absolute;
+left: 0;
+height: 100%;
+width: 100%;
+transition: all 0.3s;
+top: 0;
+opacity: 1;
+@media (max-width: 767px) {
+left: -100%;
+opacity: 0.2;
+}
+}
+border: 2px solid @border;
+border-radius: 8px;
+@media (max-width: 991px) {
+margin-bottom: 2rem;
+}
+.image-wrap img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.content-wrap {
+@media (min-width: 768px) {
+padding: 2rem;
+}
+@media (max-width: 767px) {
+padding: 1rem;
+}
+}
+&:hover, &:focus-within {
+.image-wrap {
+left: -100%;
+opacity: 0.2;
+}
+}
+}
+.team-card {
+margin-bottom: 2rem;
+transition: all 0.3s;
+&:hover {
+transform: translateY(-10px);
+}
+}
+.social-row {
+@media (max-width: 767px) {
+text-align: center;
+}
+.soc-item {
+display: inline-block;
+text-align: center;
+margin-right: 0.2rem;
+margin-bottom: 1rem;
+padding: 0.2rem;
+transition: all 0.3s;
+.mbr-iconfont {
+transition: all 0.3s;
+display: flex;
+justify-content: center;
+align-content: center;
+color: @socialIconColor;
+font-size: 1.3rem;
+}
+}
+}
+.mbr-role, .social-row {
+color: #7641e3;
+}
+.card-title, .social-row {
+color: #491414;
+}
+.card-text, .mbr-section-btn, .social-row {
+color: #0f0f0f;
+}
+.mbr-section-title {
+color: #7641e3;
+}
