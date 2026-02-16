@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Sora, Lora } from "next/font/google";
+import { Sora, Lora, Montserrat } from "next/font/google";
 import "./globals.css";
 import LS from "@/components/LS";
 
-const sora = Sora({
+const sora = Montserrat({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const lora = Lora({
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} ${lora.variable}`}>
+      <body className={`${sora.className} `}>
         <LS></LS>
         <main>{children}</main>
       </body>
