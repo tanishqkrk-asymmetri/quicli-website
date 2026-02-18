@@ -19,8 +19,8 @@ export default function Reveal() {
             <TextReveal
               text={[
                 "It's a symptom-to-resolution system",
-                "that delivers diagnosis and",
-                "prescription medicines and lab",
+                "that delivers diagnosis,",
+                "prescription, medicines and lab",
                 "tests in one flow.",
               ]}
               fillDelay={50}
@@ -35,7 +35,7 @@ export default function Reveal() {
                 "Just share your symptoms",
                 "A real doctor will",
                 "send a prescription on",
-                "WhatsApp within ten minutes",
+                "WhatsApp within 10 minutes",
               ]}
               fillDelay={50}
               fillSpeed={200}

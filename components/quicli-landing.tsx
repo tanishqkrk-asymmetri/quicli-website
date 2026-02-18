@@ -42,31 +42,31 @@ const flowSteps = [
   {
     title: "Send us a 'Hi'.",
     description:
-      "Scan the QR code, open Quicli on WhatsApp, and start a new consultation from the secure web-view.",
+      "Scan this QR code to open Quicli on your WhatsApp and send us a 'Hi'. This will enable a chatbot with a 'New Consultation' button, which will open a secure web-view within WhatsApp.",
     icon: MessageSquare,
   },
   {
     title: "Create a profile.",
     description:
-      "Add personal and medical details once. You can also create multiple profiles on the same WhatsApp number.",
+      "After the web-view has opened, create a profile by providing personal & medical information. You can create multiple profiles linked to your WhatsApp number.",
     icon: UserPlus,
   },
   {
     title: "Symptoms analysis.",
     description:
-      "Answer a few symptom questions. Quicli prepares a structured report for the doctor.",
+      "Select a profile for the consultation and answer a few multiple-choice symptoms-related questions. Once the symptoms flow is completed, a report will be prepared.",
     icon: ClipboardList,
   },
   {
-    title: "Doctor review.",
+    title: "Confirm the doctor.",
     description:
-      "A doctor is auto-assigned, reviews the report, and sends your prescription in the same WhatsApp chat.",
+      "After the report is prepared, a doctor will be auto-assigned. The doctor, after reviewing the report, will send the prescription on the same WhatsApp chat.",
     icon: Stethoscope,
   },
   {
-    title: "Buy meds and tests.",
+    title: "Buy meds & tests.",
     description:
-      "Doctor-prescribed medicines and lab tests are auto-carted so you can complete the next step in one click.",
+      "Once the prescription is received, we auto-cart the doctor-prescribed medicines and lab tests so that you can buy them with one click right from WhatsApp.",
     icon: ShoppingCart,
   },
 ];
@@ -74,31 +74,31 @@ const flowSteps = [
 const featureCards = [
   {
     title: "WhatsApp first",
-    copy: "No new app, no learning curve. You get medical advice where you already chat.",
+    copy: "WhatsApp, because it's already on your phone; it's no new app, no learning curve. It makes getting medical advice as simple as sending a message, in your native language.",
   },
   {
-    title: "Fast consultations",
-    copy: "A structured report reaches the doctor quickly, and most users receive a response within minutes.",
+    title: "Fastest consults",
+    copy: "Our robust system instantly prepares a structured symptoms report. A qualified doctor reviews it and sends you prescription within 10 minutes.",
   },
   {
-    title: "Affordable pricing",
-    copy: "Consultations start at INR 99 with Quicli Pass, designed to keep care budget-friendly.",
+    title: "Most affordable",
+    copy: "At just ₹99, Quicli offers the most affordable doctor consultation. By optimizing backend tech and using an efficient doctor model, we keep costs low and pass the savings directly to you.",
   },
   {
     title: "Medicines auto-carted",
-    copy: "After prescription, we prepare doctor-recommended medicines and tests instantly.",
+    copy: "Quicli auto-carts prescribed medicines and lab tests after your consultation so that you don't have to search or forget.",
   },
   {
-    title: "No forced video calls",
-    copy: "Video is used only when clinically needed or legally required. Most cases are handled via chat.",
+    title: "No forced video-calls",
+    copy: "Quicli doesn't force a video call. A video call to the patient will be made only if it is mandated by law or if the doctor wants to know more about the symptom.",
   },
   {
-    title: "Doctor auto-assign",
-    copy: "You do not browse doctors or wait for slots. Quicli routes your report to an available doctor.",
+    title: "Doctor auto-assigned",
+    copy: "Quicli automatically assigns the right available doctor. No browsing, no waiting for an appointment. Your report is then instantly shared for review.",
   },
   {
-    title: "Continuity and follow-ups",
-    copy: "Past consultation context and follow-up reminders help doctors and patients stay aligned.",
+    title: "Continuity & follow-ups",
+    copy: "Quicli remembers your previous symptoms and shares your past consultation details with the doctor every time. With timely WhatsApp follow-up reminders, we check in on you to ensure you are doing fine.",
   },
 ];
 
@@ -112,7 +112,7 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "I had a bad cough but could not take time out for a video call. I simply messaged Quicli during work and got my prescription in minutes.",
+      "I had a bad cough but couldn't take time out for a video call. I simply messaged Quicli on WhatsApp during work and received my prescription within minutes. Quick, simple, and done.",
     name: "Karan Singh, 27",
     role: "Software Engineer, Bangalore",
     image:
@@ -120,7 +120,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I was unsure about online care, but Quicli felt simple and reliable. A real doctor reviewed my symptoms and sent a clear prescription quickly.",
+      "I wasn't sure if online medical help would feel reliable, but Quicli surprised me. A real doctor reviewed my symptoms and sent a prescription quickly, it felt simple and trustworthy.",
     name: "Tsering Lepcha, 20",
     role: "College Student, Gangtok",
     image:
@@ -128,7 +128,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Most apps force video calls. Quicli let me type symptoms on WhatsApp and I got prescription, medicines, and tests lined up in one flow.",
+      "Video calls always felt confusing and unnecessary to me, and most apps make them mandatory. With Quicli, I just typed my symptoms on WhatsApp and got my prescription - even medicines and lab tests were automatically selected to be bought. So simple.",
     name: "Vikram Rathi, 64",
     role: "Army Veteran, Lucknow",
     image:
@@ -136,7 +136,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "For my son’s fever, I did not need appointments or call scheduling. I shared symptoms and completed consultation and medicine order quickly.",
+      "When my son had a fever, I didn't want to deal with appointments or video calls. With Quicli, I shared his symptoms on WhatsApp, received the doctor's prescription quickly, and ordered the medicines within minutes. It was such a relief.",
     name: "Geeta Sharma, 39",
     role: "Home Maker, Jaipur",
     image:
@@ -148,21 +148,21 @@ const team = [
   {
     name: "Himmat Singh",
     role: "CEO",
-    bio: "Built and led startups, and now drives Quicli vision, growth, and execution.",
+    bio: "Having a founder's instinct, built and led multiple startups, driving vision, teams, and execution. Known for building systems. Now responsible for vision, growth, & execution of Quicli.",
     image:
       "https://r.mobirisesite.com/2305096/assets/images/team1-h_mlksgw19.jpg",
   },
   {
-    name: "Nandagopal",
+    name: "Nanda Kishore",
     role: "CTO",
-    bio: "Leads technology and product systems across Quicli with deep execution focus.",
+    bio: "Entrepreneur, expert in handling and developing tech projects, and leading tech team at Quicli. Deep tech + real execution: a postgrad in computer applications (MIT, Manipal).",
     image:
       "https://r.mobirisesite.com/2305096/assets/images/team2-h_mlksts01.jpg",
   },
   {
     name: "Kushal Motwani",
     role: "CMO",
-    bio: "Doctor and clinical pathway lead for evidence-based consultation quality.",
+    bio: "A medical doctor & currently pursuing MD in Community Medicine (PSM). Leading evidence-based medical pathways that simplify clinical decision-making & preventive care for doctors at Quicli.",
     image:
       "https://r.mobirisesite.com/2305096/assets/images/team3-h_mljlskvm.jpg",
   },
@@ -170,28 +170,28 @@ const team = [
 
 const faqs = [
   {
-    q: "Is Quicli safe, reliable, and by real doctors?",
-    a: "Yes. Consultations are reviewed by registered doctors, prescriptions are issued when medically appropriate, and information is handled confidentially.",
+    q: "Is Quicli safe, reliable & by real doctors?",
+    a: "Yes. All consultations are reviewed by a registered doctor. Prescriptions are issued only when medically appropriate, just like an offline visit, and your information remains confidential. Always.",
   },
   {
-    q: "Is this the same as other consultation apps?",
-    a: "Not exactly. You do not book a call or wait for slots. You share symptoms on WhatsApp and receive doctor guidance quickly.",
+    q: "Is it the same as other consultation apps?",
+    a: "Not really. You don't book a call or wait for a video slot. You share your symptoms on WhatsApp, a licensed doctor reviews them, and you receive a proper medical response, usually within minutes.",
   },
   {
-    q: "Are all consultations via video call?",
-    a: "No. Most consultations are completed through chat. Video is used only when clinically or legally required.",
+    q: "Are all the consultations via video-call?",
+    a: "No. Most consultations are completed via chat. Video is used only when clinically or regulatory required.",
   },
   {
     q: "What if my condition is serious?",
-    a: "If symptoms indicate risk, doctors guide you to hospital or specialist care immediately.",
+    a: "If your symptoms are serious, our doctors will immediately advise you to visit a hospital or specialist at the earliest, for proper care.",
   },
   {
     q: "What conditions can Quicli help with?",
-    a: "Common conditions like fever, cough, skin issues, infections, stomach issues, and more. Emergency or examination-heavy cases are clearly flagged.",
+    a: "Common issues like cold, fever, infections, skin problems, stomach issues, mental health concerns, and more. If something requires physical examination or emergency care, Quicli clearly tells you that.",
   },
   {
-    q: "How fast is the prescription turnaround?",
-    a: "Most consultations are completed in around 9 minutes.",
+    q: "How quickly will I get my prescription?",
+    a: "We complete most consultations and provide you with a prescription within 9 minutes.",
   },
 ];
 
@@ -267,7 +267,7 @@ function TestimonialMarquee({ testimonials }: { testimonials: Testimonial[] }) {
             &ldquo;{item.quote}&rdquo;
           </motion.p>
           <motion.div
-            className="profile flex items-center gap-4 border-t border-[#e8e4f4] pt-4"
+            className="profile flex items-center gap-4 border-t border-[#e8e4f4] pt-4 hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -474,9 +474,9 @@ export function QuicliLanding() {
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeUpVariants}
               >
-                Symptom-related searches can create confusion and anxiety.
-                Quicli converts your WhatsApp message into a doctor-led
-                diagnosis and treatment path.
+                Symptom-related searches are scary. One online search and
+                suddenly you’re more anxious, confused, and worried. They even
+                have a word for it, ‘Cyberchondria’.
               </motion.p>
             </div>
             <motion.div
@@ -532,7 +532,7 @@ export function QuicliLanding() {
           variants={fadeUpVariants}
           transition={fadeUpTransition}
         >
-          Quicli isn't just a doctor consultation platform
+          Quicli isn’t just a doctor consultation platform.
         </motion.div>
         <Reveal></Reveal>
       </section>
@@ -556,7 +556,15 @@ export function QuicliLanding() {
                   >
                     {(() => {
                       const ActiveIcon = flowSteps[activeStepIndex].icon;
-                      return <ActiveIcon color="#6a38d7" size={200} />;
+                      return activeStepIndex === 0 ? (
+                        <img
+                          className="w-84"
+                          src="https://r.mobirisesite.com/2305096/assets/images/photo-1758519289022-5f9dea0d8-h_mlkjxo1z.jpg"
+                          alt=""
+                        />
+                      ) : (
+                        <ActiveIcon color="#6a38d7" size={200} />
+                      );
                     })()}
                   </div>
                 </div>
@@ -661,7 +669,7 @@ export function QuicliLanding() {
                   viewport={{ once: true, margin: "-100px" }}
                   variants={fadeUpVariants}
                 >
-                  Doctors can focus on decisions, not repetitive intake.
+                  Here to help Doctors.
                 </motion.h2>
                 <div className="space-y-3">
                   <motion.p
@@ -671,9 +679,11 @@ export function QuicliLanding() {
                     viewport={{ once: true, margin: "-100px" }}
                     variants={fadeUpVariants}
                   >
-                    Quicli analyzes symptom reports and prepares a structured
-                    clinical summary. Doctors spend less time on back-and-forth
-                    and more time on the likely diagnosis and treatment.
+                    Quicli’s intelligent algorithm carefully analyzes a
+                    patient’s symptom report and prepares a structured clinical
+                    summary, helping doctors skip routine back-and-forth
+                    questions and focus directly on the likely cause, saving
+                    time & effort.
                   </motion.p>
                   <motion.p
                     className="text-base md:text-lg"
@@ -682,8 +692,11 @@ export function QuicliLanding() {
                     viewport={{ once: true, margin: "-100px" }}
                     variants={fadeUpVariants}
                   >
-                    Medicines and lab guidance are supported by a medical
-                    backend so many consultations can close in 3 to 5 minutes.
+                    {" "}
+                    It then matches the possible diagnosis with our extensive
+                    medical backend, including Medicines and Lab test guidance,
+                    enabling doctors to complete most consultations in just 3 -
+                    5 mins.
                   </motion.p>
                 </div>
               </div>
@@ -721,13 +734,13 @@ export function QuicliLanding() {
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeUpVariants}
               >
-                Quicli combines speed, affordability, and simplicity so
-                healthcare is truly hassle-free.
+                Quicli combines speed, affordability, and simplicity. Healthcare
+                is finally hassle-free.
               </motion.p>
             </article>
             {featureCards.map((feature, idx) => (
               <article
-                className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl bg-[#7641e3] p-6 md:p-5 text-[#ded6ff] aspect-square flex flex-col justify-between"
+                className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl bg-[#7641e3] p-6 md:p-5 text-[#ded6ff] aspect-square flex flex-col justify-between pb-6"
                 key={feature.title}
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
@@ -742,7 +755,7 @@ export function QuicliLanding() {
                 </motion.span>
                 <div>
                   <motion.h3
-                    className="mt-2 max-w-[85%] text-xl md:text-5xl font-bold leading-tight"
+                    className="mt-2 max-w-[85%] text-xl md:text-6xl font-bold leading-tight"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
@@ -779,7 +792,8 @@ export function QuicliLanding() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              Doctor consultation, now affordable.
+              Doctor's Consultation now affordable for everyone. ₹99 /
+              consultation.
             </motion.h2>
             <motion.p
               className="section-copy text-xl md:text-2xl font-semibold text-[#ded6ff] text-center"
@@ -792,28 +806,31 @@ export function QuicliLanding() {
             </motion.p>
           </div>
           <div className="pricing-grid mt-4 md:mt-8 grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 max-w-5xl">
-            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] aspect-square">
-              <motion.h3
-                className="text-xl md:text-2xl font-bold"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={fadeUpVariants}
-              >
-                Quicli Pass.
-              </motion.h3>
-              <motion.p
-                className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={fadeUpVariants}
-              >
-                Quicli Pass lets you consult a doctor at just{" "}
-                <span className="font-semibold">₹99</span> all year round after
-                a one-time purchase. Buy once, save on every consultation.
-              </motion.p>
-              <hr className="my-4 md:my-6 border-white/30" />
+            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] aspect-square flex flex-col justify-between">
+              <div>
+                <motion.h3
+                  className="text-xl md:text-2xl font-bold"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  QUICLI PASS
+                </motion.h3>
+                <motion.p
+                  className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  Quicli Pass lets you consult a doctor at just{" "}
+                  <span className="font-semibold">₹99</span> all year round
+                  after a one-time purchase. Buy once, save on every
+                  consultation.
+                </motion.p>
+                <hr className="my-4 md:my-6 border-white/30" />
+              </div>
               <motion.div
                 className="flex items-center justify-between"
                 initial="hidden"
@@ -827,29 +844,31 @@ export function QuicliLanding() {
                 <span className="text-3xl md:text-6xl font-bold">₹99</span>
               </motion.div>
             </article>
-            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff]">
-              <motion.h3
-                className="text-xl md:text-2xl font-bold"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={fadeUpVariants}
-              >
-                Regular.
-              </motion.h3>
-              <motion.p
-                className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={fadeUpVariants}
-              >
-                At <span className="font-semibold">₹199</span> / Consultation,
-                Quicli remains one of the most affordable in India. Medical
-                advice at a price that&apos;s still lower than most clinic &
-                apps.
-              </motion.p>
-              <hr className="my-4 md:my-6 border-white/30" />
+            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] flex flex-col justify-between">
+              <div>
+                <motion.h3
+                  className="text-xl md:text-2xl font-bold"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  REGULAR
+                </motion.h3>
+                <motion.p
+                  className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  At <span className="font-semibold">₹199</span> / Consultation,
+                  Quicli remains one of the most affordable in India. Medical
+                  advice at a price that&apos;s still lower than most clinic &
+                  apps.
+                </motion.p>
+                <hr className="my-4 md:my-6 border-white/30" />
+              </div>
               <motion.div
                 className="flex items-center justify-between"
                 initial="hidden"
