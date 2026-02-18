@@ -632,7 +632,7 @@ export function QuicliLanding() {
       </section>
       <section
         ref={iconsRef}
-        className="min-h-[50vh] bg-[#f6f6f6] flex items-center justify-center relative"
+        className="min-h-[50vh] bg-[#f6f6f6] flex items-center justify-center relative overflow-x-hidden"
       >
         <motion.img
           style={{

@@ -2,7 +2,7 @@ import { QuicliLanding } from "@/components/quicli-landing";
 
 export default function HomePage() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="">
       <QuicliLanding />
     </div>
   );
