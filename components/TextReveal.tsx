@@ -60,22 +60,29 @@ export default function Reveal() {
               />
             </div>
           </div>
-          <div className="hidden max-md:block">
+          <div className="hidden max-md:block text-2xl">
             <TextReveal
               text={[
-                "At Gacsym, ",
-                "we seek strong ideas",
-                "backed by dedicated",
-                "founding teams",
-                "with robust",
-                "Go-To-Market (GTM) ",
-                "strategies",
-                "who need technical ",
-                "and development.",
-                " expertise",
+                "It's a",
+                "symptom-to-resolution",
+                "system",
+                "that delivers",
+                "diagnosis,",
+                "prescription,",
+                "medicines,",
+                "and lab tests",
+                "in one flow.",
+                "Just share your symptoms.",
+                "A real doctor",
+                "will send a prescription",
+                "on WhatsApp",
+                "within 10 minutes.",
+                "No booking appointments.",
+                "No waiting.",
+                "No new app download.",
               ]}
               fillDelay={0}
-              fillSpeed={100}
+              fillSpeed={1000}
               fillDirection="left-right"
               fillType="scroll"
               textColor="#00000030"
