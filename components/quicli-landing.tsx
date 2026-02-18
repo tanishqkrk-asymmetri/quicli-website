@@ -1199,12 +1199,18 @@ export function QuicliLanding() {
         </div>
       </footer>
 
-      {/* Corner: hover to view image */}
+      {/* Corner: click to open WhatsApp (hover preview on desktop only) */}
       <div className="fixed bottom-4 right-4 z-[9997] group/corner">
-        <div className="flex cursor-pointer items-center gap-1.5 rounded-full border border-white/30 bg-theme/90 px-3 py-1.5 text-xs text-[#ded6ff]/90 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out hover:border-white/50 hover:text-[#ded6ff]">
-          <span className="opacity-90">Hover here to consult now!</span>
-        </div>
-        <div className="pointer-events-none absolute bottom-full right-0 mb-2 w-48 overflow-hidden rounded-xl border border-white/20 bg-theme/95 shadow-2xl opacity-0 translate-y-2 scale-95 transition-all duration-300 ease-out group-hover/corner:pointer-events-auto group-hover/corner:opacity-100 group-hover/corner:translate-y-0 group-hover/corner:scale-100">
+        <a
+          href="https://wa.me/919632842928"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex cursor-pointer items-center gap-1.5 rounded-full border border-white/30 bg-theme/90 px-3 py-1.5 text-xs text-[#ded6ff]/90 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out hover:border-white/50 hover:text-[#ded6ff]"
+        >
+          <img src="/whatsapp.png" className="h-4 w-4" alt="" />
+          <span className="opacity-90">Consult on WhatsApp</span>
+        </a>
+        <div className="pointer-events-none absolute bottom-full right-0 mb-2 w-48 overflow-hidden rounded-xl border border-white/20 bg-theme/95 shadow-2xl opacity-0 translate-y-2 scale-95 transition-all duration-300 ease-out group-hover/corner:pointer-events-auto group-hover/corner:opacity-100 group-hover/corner:translate-y-0 group-hover/corner:scale-100 hidden md:block">
           <Image
             src={
               "https://r.mobirisesite.com/2305096/assets/images/photo-1758519289022-5f9dea0d8-h_mlkjxo1z.jpg"
@@ -1212,7 +1218,7 @@ export function QuicliLanding() {
             alt="Preview"
             width={192}
             height={256}
-            className="] w-full object-cover"
+            className="w-full object-cover"
           />
         </div>
       </div>
