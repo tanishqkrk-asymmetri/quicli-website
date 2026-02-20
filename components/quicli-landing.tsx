@@ -354,7 +354,11 @@ export function QuicliLanding() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Quicli
+          <img
+            className="w-12"
+            src="https://r.mobirisesite.com/2305096/assets/images/features1-h_mlgks1bk.jpg"
+            alt=""
+          />
         </motion.a>
         {/* Desktop nav */}
         <motion.div
@@ -805,7 +809,84 @@ export function QuicliLanding() {
               Quicli keeps tele-consultation accessible with transparent plans.
             </motion.p>
           </div>
-          <div className="pricing-grid mt-4 md:mt-8 grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 max-w-5xl">
+          <div className="pricing-grid mt-4 md:mt-8 grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-3 max-w-8xl">
+            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] aspect-square flex flex-col justify-between">
+              <div>
+                <motion.h3
+                  className="text-xl md:text-2xl font-bold"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  QUICLI START
+                </motion.h3>
+                <motion.p
+                  className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  Get your first 2 consultations at just{" "}
+                  <strong>₹49 each</strong>. Start your care journey with a
+                  special introductory offer designed to make access easy and
+                  stress-free.
+                </motion.p>
+                <hr className="my-4 md:my-6 border-white/30" />
+              </div>
+              <motion.div
+                className="flex items-center justify-between"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeUpVariants}
+              >
+                <span className="text-base md:text-lg text-[#ded6ff]/80">
+                  Price / Consultation
+                </span>
+                <span className="text-3xl md:text-6xl font-bold">₹49</span>
+              </motion.div>
+            </article>
+
+            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] flex flex-col justify-between">
+              <div>
+                <motion.h3
+                  className="text-xl md:text-2xl font-bold"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  STANDARD
+                </motion.h3>
+                <motion.p
+                  className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeUpVariants}
+                >
+                  At <span className="font-semibold">₹199</span> / Consultation,
+                  Quicli remains one of the most affordable in India. Medical
+                  advice at a price that&apos;s still lower than most clinic &
+                  apps.
+                </motion.p>
+                <hr className="my-4 md:my-6 border-white/30" />
+              </div>
+              <motion.div
+                className="flex items-center justify-between"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeUpVariants}
+              >
+                <span className="text-base md:text-lg text-[#ded6ff]/80">
+                  Price / Consultation
+                </span>
+                <span className="text-3xl md:text-6xl font-bold">₹199</span>
+              </motion.div>
+            </article>
             <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] aspect-square flex flex-col justify-between">
               <div>
                 <motion.h3
@@ -842,44 +923,6 @@ export function QuicliLanding() {
                   Price / Consultation
                 </span>
                 <span className="text-3xl md:text-6xl font-bold">₹99</span>
-              </motion.div>
-            </article>
-            <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] flex flex-col justify-between">
-              <div>
-                <motion.h3
-                  className="text-xl md:text-2xl font-bold"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
-                  variants={fadeUpVariants}
-                >
-                  REGULAR
-                </motion.h3>
-                <motion.p
-                  className="mt-3 md:mt-4 leading-7 text-[#ded6ff]/90 text-base md:text-lg"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
-                  variants={fadeUpVariants}
-                >
-                  At <span className="font-semibold">₹199</span> / Consultation,
-                  Quicli remains one of the most affordable in India. Medical
-                  advice at a price that&apos;s still lower than most clinic &
-                  apps.
-                </motion.p>
-                <hr className="my-4 md:my-6 border-white/30" />
-              </div>
-              <motion.div
-                className="flex items-center justify-between"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={fadeUpVariants}
-              >
-                <span className="text-base md:text-lg text-[#ded6ff]/80">
-                  Price / Consultation
-                </span>
-                <span className="text-3xl md:text-6xl font-bold">₹199</span>
               </motion.div>
             </article>
           </div>

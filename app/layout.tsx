@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Sora, Lora, Montserrat } from "next/font/google";
+import { Sora, Lora, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import LS from "@/components/LS";
 
-const sora = Montserrat({
+const sora = Poppins({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700", "800", "900"],
