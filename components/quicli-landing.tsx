@@ -153,7 +153,7 @@ const team = [
       "https://r.mobirisesite.com/2305096/assets/images/team1-h_mlksgw19.jpg",
   },
   {
-    name: "Nanda Kishore",
+    name: "Nandagopal",
     role: "CTO",
     bio: "Entrepreneur, expert in handling and developing tech projects, and leading tech team at Quicli. Deep tech + real execution: a postgrad in computer applications (MIT, Manipal).",
     image:
@@ -267,7 +267,7 @@ function TestimonialMarquee({ testimonials }: { testimonials: Testimonial[] }) {
             &ldquo;{item.quote}&rdquo;
           </motion.p>
           <motion.div
-            className="profile flex items-center gap-4 border-t border-[#e8e4f4] pt-4 hidden"
+            className="profile flex items-center gap-4 border-t border-[#e8e4f4] pt-4 "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -278,7 +278,7 @@ function TestimonialMarquee({ testimonials }: { testimonials: Testimonial[] }) {
               alt={item.name}
               width={48}
               height={48}
-              className="avatar h-12 w-12 rounded-full object-cover ring-2 ring-[#7641e3]/20"
+              className="avatar h-12 w-12 rounded-full object-cover ring-2 ring-[#7641e3]/20 hidden"
             />
             <div className="min-w-0">
               <strong className="block truncate text-base md:text-lg font-semibold text-[#111322]">
@@ -298,6 +298,14 @@ function TestimonialMarquee({ testimonials }: { testimonials: Testimonial[] }) {
 export function QuicliLanding() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    onScroll(); // set initial state
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const [activeTeamMember, setActiveTeamMember] = useState<number | null>(null);
   const stepRefs = useRef<(HTMLLIElement | null)[]>([]);
 
@@ -349,16 +357,35 @@ export function QuicliLanding() {
       <header className="fixed bg-theme top-0 w-full flex justify-between items-center p-3 px-4 md:px-8 text-[#ded6ff] z-9999">
         <motion.a
           href="#home"
-          className="text-xl md:text-2xl font-bold"
+          className="text-xl md:text-2xl font-bold flex items-center min-w-12 min-h-12 md:min-w-12 md:min-h-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            className="w-12"
-            src="https://r.mobirisesite.com/2305096/assets/images/features1-h_mlgks1bk.jpg"
-            alt=""
-          />
+          <AnimatePresence mode="wait">
+            {!isScrolled ? (
+              <motion.img
+                key="logo-img"
+                className="w-12"
+                src="https://r.mobirisesite.com/2305096/assets/images/features1-h_mlgks1bk.jpg"
+                alt="Quicli"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              />
+            ) : (
+              <motion.span
+                key="logo-text"
+                className="text-[#ded6ff]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                Quicli
+              </motion.span>
+            )}
+          </AnimatePresence>
         </motion.a>
         {/* Desktop nav */}
         <motion.div
@@ -470,9 +497,9 @@ export function QuicliLanding() {
               textAlign="left"
             />
 
-            <div className="flex justify-start md:justify-end w-full mt-6 md:mt-0">
+            <div className="flex justify-start md:justify-end w-full mt-6 md:mt-0 md:pr-16">
               <motion.p
-                className="text-left max-w-md text-base md:text-lg text-[#ded6ff] font-semibold"
+                className="text-left max-w-md text-base md:text-lg text-[#ded6ff] "
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
@@ -542,7 +569,7 @@ export function QuicliLanding() {
       </section>
 
       <section
-        className="section alt sec3-flow px-4 md:px-0 pt-36 bg-[#f6f6f6]"
+        className="section alt sec3-flow px-4 md:px-8 pt-36 bg-[#f6f6f6]"
         id="flow"
       >
         <div className="/container">
@@ -605,7 +632,7 @@ export function QuicliLanding() {
                         {step.title}
                       </motion.h3>
                       <motion.p
-                        className="text-base md:text-lg text-black/50"
+                        className="text-base md:text-2xl text-black/50"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
@@ -628,7 +655,7 @@ export function QuicliLanding() {
                 rel="noreferrer"
               >
                 <img src="/whatsapp.png" className="w-6" alt="" />
-                Start on WhatsApp
+                Start consultation
               </a>
             </Button>
           </div>
@@ -636,7 +663,7 @@ export function QuicliLanding() {
       </section>
       <section
         ref={iconsRef}
-        className="min-h-[50vh] bg-[#f6f6f6] flex items-center justify-center relative overflow-x-hidden"
+        className="min-h-[50vh] bg-[#f6f6f6] flex items-center justify-center relative overflow-x-hidden px-4 md:px-8"
       >
         <motion.img
           style={{
@@ -659,7 +686,7 @@ export function QuicliLanding() {
         </motion.div>
       </section>
       <section
-        className="section doctor sec4-doctor bg-brand/50 text-[#ded6ff] p-6 md:p-36"
+        className="section doctor sec4-doctor bg-[#ada0f9] text-[#ded6ff] px-4 md:px-8 py-6 md:py-36"
         id="doctors"
       >
         <div className="">
@@ -720,7 +747,7 @@ export function QuicliLanding() {
 
       <section className="section sec5-features" id="features">
         <div className="/container py-10 md:py-16 flex justify-center items-center w-full">
-          <div className="feature-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 px-4 md:px-16 gap-4 md:gap-9 max-w-7xl">
+          <div className="feature-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 px-4 md:px-8 gap-4 md:gap-9 max-w-7xl">
             <article className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl p-6 md:p-8 text-black ">
               <motion.h3
                 className="mt-2 max-w-[85%] text-3xl md:text-6xl font-bold leading-tight"
@@ -744,7 +771,7 @@ export function QuicliLanding() {
             </article>
             {featureCards.map((feature, idx) => (
               <article
-                className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl bg-[#7641e3] p-6 md:p-5 text-[#ded6ff] aspect-square flex flex-col justify-between pb-6"
+                className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl bg-[#7641e3] p-6 md:p-5 text-[#ded6ff] aspect-square flex flex-col justify-start "
                 key={feature.title}
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
@@ -790,16 +817,16 @@ export function QuicliLanding() {
         <div className="/container px-4 md:px-8 flex justify-center items-center flex-col">
           <div className="w-full flex justify-center items-center flex-col py-10 md:py-16">
             <motion.h2
-              className="section-title text-3xl md:text-6xl text-[#ded6ff] font-bold mb-4 md:mb-6 text-center"
+              className="section-title text-3xl md:text-5xl text-[#ded6ff] font-bold mb-4 md:mb-6 text-center "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              Doctor's Consultation now affordable for everyone. ₹99 /
+              Doctor's Consultation now affordable for everyone. <br /> ₹99 /
               consultation.
             </motion.h2>
-            <motion.p
+            {/* <motion.p
               className="section-copy text-xl md:text-2xl font-semibold text-[#ded6ff] text-center"
               initial="hidden"
               whileInView="visible"
@@ -807,9 +834,9 @@ export function QuicliLanding() {
               variants={fadeUpVariants}
             >
               Quicli keeps tele-consultation accessible with transparent plans.
-            </motion.p>
+            </motion.p> */}
           </div>
-          <div className="pricing-grid mt-4 md:mt-8 grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-3 max-w-8xl">
+          <div className="pricing-grid mt-4 md:mt-8 grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-8xl">
             <article className="price-card reveal rounded-2xl bg-[#492989] p-6 md:p-8 text-[#ded6ff] aspect-square flex flex-col justify-between">
               <div>
                 <motion.h3
@@ -971,7 +998,7 @@ export function QuicliLanding() {
       </section>
 
       <section
-        className="section cta sec9-try bg-theme text-[#ded6ff] p-6 md:p-16"
+        className="section cta sec9-try bg-theme text-[#ded6ff] px-4 md:px-8 py-6 md:py-16 "
         id="try"
       >
         <div className="/container cta-grid flex flex-col md:flex-row items-center justify-between gap-8">
@@ -1000,7 +1027,7 @@ export function QuicliLanding() {
                   rel="noreferrer"
                 >
                   <img src="/whatsapp.png" className="w-6" alt="" />
-                  Send us a Hi on WhtasApp
+                  Try Quicli now!
                 </a>
               </Button>
             </motion.div>
@@ -1010,13 +1037,13 @@ export function QuicliLanding() {
             alt="Try Quicli section visual"
             width={720}
             height={520}
-            className="cover-image try-image reveal w-full md:w-128"
+            className="cover-image try-image reveal w-full md:w-96 lg:w-128"
           />
         </div>
       </section>
 
       <section
-        className="section alt sec10-team bg-linear-to-b from-[#f7f5ff] to-white py-12 md:py-20"
+        className="section alt sec10-team bg-linear-to-b from-[#f7f5ff] to-white py-12 md:py-20 px-4 md:px-8"
         id="team"
       >
         <div className="/container">
@@ -1038,7 +1065,7 @@ export function QuicliLanding() {
           >
             Meet the people building the future of healthcare.
           </motion.p>
-          <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-16">
+          <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {team.map((member, idx) => {
               const isActive = activeTeamMember === idx;
               return (
@@ -1061,7 +1088,7 @@ export function QuicliLanding() {
                     className={`absolute inset-0 h-full flex flex-col items-center justify-center bg-theme p-8 text-center  transition-all duration-500 md:opacity-100 text-[#ded6ff]   ${isActive ? "opacity-100 translate-y-0" : "opacity-0 "}`}
                   >
                     <motion.p
-                      className="mb-3 text-base md:text-lg font-bold uppercase tracking-widest text-[#e8e4f4]"
+                      className="mb-3 text-base md:text-lg font-bold uppercase tracking-widest text-[#e8e4f4] text-left w-full"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: "-100px" }}
@@ -1070,7 +1097,7 @@ export function QuicliLanding() {
                       {member.role}
                     </motion.p>
                     <motion.h3
-                      className="mb-4 text-3xl md:text-6xl font-bold"
+                      className="mb-4 text-3xl md:text-6xl font-bold w-full text-left"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: "-100px" }}
@@ -1079,7 +1106,7 @@ export function QuicliLanding() {
                       {member.name}
                     </motion.h3>
                     <motion.p
-                      className="text-xl md:text-2xl leading-relaxed text-[#ded6ff]"
+                      className="text-xl md:text-xl w-full text-left leading-relaxed text-[#ded6ff]"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: "-100px" }}
@@ -1107,12 +1134,12 @@ export function QuicliLanding() {
       </section>
 
       <section
-        className="section sec11-faq bg-linear-to-b from-white to-[#f7f5ff] py-12 md:py-20 flex flex-col md:flex-row justify-center gap-6 md:gap-16 px-4 md:px-18 "
+        className="section sec11-faq bg-linear-to-b from-white to-[#f7f5ff] py-12 md:py-20 flex flex-col md:flex-row justify-center gap-6 md:gap-16 px-4 md:px-8"
         id="faq"
       >
-        <div>
+        <div className="w-1/3">
           <motion.h2
-            className="section-title mb-3 text-[#111322] text-3xl md:text-6xl font-bold "
+            className="section-title mb-3 text-[#111322] text-3xl md:text-6xl font-bold  "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -1130,7 +1157,7 @@ export function QuicliLanding() {
             Quick answers to common questions about Quicli.
           </motion.p>
         </div>
-        <div className="/container max-w-3xl">
+        <div className="/container max-w-3xl w-2/3">
           <div className="faq-list grid gap-4">
             {faqs.map((faq, idx) => (
               <motion.details
@@ -1174,7 +1201,7 @@ export function QuicliLanding() {
         className="section contact sec12-contact bg-theme py-12 md:py-20 text-[#ded6ff] px-4 md:px-8"
         id="contact"
       >
-        <div className="/container max-w-4xl px-4 md:px-8">
+        <div className="/container max-w-4xl">
           <motion.h2
             className="mb-10 text-4xl font-bold tracking-tight md:text-8xl"
             initial="hidden"
@@ -1184,7 +1211,7 @@ export function QuicliLanding() {
           >
             Get in touch!
           </motion.h2>
-          <div className="space-y-6 text-xl md:text-2xl font-semibold">
+          <div className="space-y-3 text-xl md:text-2xl font-semibold">
             <motion.p
               className="leading-relaxed"
               initial="hidden"
@@ -1230,13 +1257,13 @@ export function QuicliLanding() {
               className="h-16 w-auto object-contain md:h-20 lg:h-24"
             />
             <motion.p
-              className="max-w-md text-base md:text-lg leading-relaxed text-[#e8e4f4]"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUpVariants}
+              className="max-w-md text-base md:text-lg leading-relaxed text-[#e8e4f490]"
+              // initial="hidden"
+              // whileInView="visible"
+              // viewport={{ once: true, margin: "-100px" }}
+              // variants={fadeUpVariants}
             >
-              © 2026 Quicli Healthtech Pvt. Ltd. All rights reserved.
+              © 2026 Quicli Healthtech Pvt. Ltd. <br /> All rights reserved.
             </motion.p>
           </div>
         </div>
