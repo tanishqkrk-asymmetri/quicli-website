@@ -1025,6 +1025,7 @@ export function QuicliLanding() {
             <motion.div
               initial="hidden"
               whileInView="visible"
+              className="flex justify-center items-center"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
