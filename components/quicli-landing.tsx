@@ -66,7 +66,7 @@ const flowSteps = [
   {
     title: "Buy meds & tests.",
     description:
-      "Once the prescription is received, we auto-cart the doctor-prescribed medicines and lab tests so that you can buy them with one click right from WhatsApp.",
+      "Once the prescription is received, we auto-cart the doctor-prescribed medicines and lab tests so that you can buy them with one tap right from WhatsApp.",
     icon: ShoppingCart,
   },
 ];
@@ -74,7 +74,7 @@ const flowSteps = [
 const featureCards = [
   {
     title: "WhatsApp first",
-    copy: "WhatsApp, because it's already on your phone; it's no new app, no learning curve. It makes getting medical advice as simple as sending a message, in your native language.",
+    copy: "WhatsApp, because it's already on your phone;  no new app, no learning curve. It makes getting medical advice as simple as sending a message, in your native language.",
   },
   {
     title: "Fastest consults",
@@ -86,14 +86,14 @@ const featureCards = [
   },
   {
     title: "Medicines auto-carted",
-    copy: "Quicli auto-carts prescribed medicines and lab tests after your consultation so that you don't have to search or forget.",
+    copy: "Quicli auto-carts prescribed medicines and lab tests after your consultation is done so that you don't have to search, avoid or forget.",
   },
   {
     title: "No forced video-calls",
     copy: "Quicli doesn't force a video call. A video call to the patient will be made only if it is mandated by law or if the doctor wants to know more about the symptom.",
   },
   {
-    title: "Doctor auto-assigned",
+    title: `Doctor auto-assigned`,
     copy: "Quicli automatically assigns the right available doctor. No browsing, no waiting for an appointment. Your report is then instantly shared for review.",
   },
   {
@@ -245,7 +245,7 @@ function TestimonialMarquee({ testimonials }: { testimonials: Testimonial[] }) {
     >
       {[...testimonials, ...testimonials].map((item, idx) => (
         <article
-          className="testimonial-card flex min-w-[280px] max-w-[340px] md:min-w-[340px] md:max-w-[380px] shrink-0 flex-col rounded-2xl border border-[#e8e4f4] bg-white p-5 md:p-6 shadow-sm transition-shadow hover:shadow-md"
+          className="testimonial-card flex min-w-[280px] max-w-[340px] md:min-w-[340px] md:max-w-[380px] shrink-0 flex-col rounded-2xl border border-black  p-5 md:p-6 shadow-sm transition-shadow hover:shadow-md"
           key={`${item.name}-${idx}`}
         >
           <motion.p
@@ -374,16 +374,13 @@ export function QuicliLanding() {
                 transition={{ duration: 0.2 }}
               />
             ) : (
-              <motion.span
-                key="logo-text"
-                className="text-[#ded6ff]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                Quicli
-              </motion.span>
+              <Image
+                src="https://r.mobirisesite.com/2305096/assets/images/logo-h_mlhtbvih.png"
+                alt="Quicli Logo"
+                width={320}
+                height={96}
+                className="h-6 w-auto object-contain md:h-6 lg:h-6"
+              />
             )}
           </AnimatePresence>
         </motion.a>
@@ -655,7 +652,7 @@ export function QuicliLanding() {
                 rel="noreferrer"
               >
                 <img src="/whatsapp.png" className="w-6" alt="" />
-                Start consultation
+                Start a consultation now!
               </a>
             </Button>
           </div>
@@ -691,7 +688,7 @@ export function QuicliLanding() {
       >
         <div className="">
           <div className="doctor-frame flex justify-center">
-            <div className="doctor-grid flex flex-col md:flex-row bg-theme rounded-xl p-6 md:p-12 md:max-w-7xl  md:pb-0 max-w-full ">
+            <div className="doctor-grid flex flex-col md:flex-row bg-theme rounded-xl p-6 md:p-12 md:max-w-6xl  md:pb-0 max-w-full ">
               <div className="reveal space-y-8 md:space-y-16 md:w-1/2  pb-6 text-[#ded6ff]">
                 <motion.h2
                   className="text-3xl md:text-6xl font-bold"
@@ -771,7 +768,7 @@ export function QuicliLanding() {
             </article>
             {featureCards.map((feature, idx) => (
               <article
-                className="feature-card reveal relative min-h-[200px] md:min-h-[280px] overflow-hidden rounded-3xl bg-[#7641e3] p-6 md:p-5 text-[#ded6ff] aspect-square flex flex-col justify-start "
+                className="feature-card reveal relative  overflow-hidden rounded-3xl bg-[#7641e3] p-10 md:p-12 text-[#ded6ff] aspect-square flex flex-col justify-start "
                 key={feature.title}
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
@@ -784,16 +781,28 @@ export function QuicliLanding() {
                 >
                   {idx + 1}
                 </motion.span>
-                <div>
-                  <motion.h3
-                    className="mt-2 max-w-[85%] text-xl md:text-6xl font-bold leading-tight"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={fadeUpVariants}
-                  >
-                    {feature.title}
-                  </motion.h3>
+                <div className="h-full flex flex-col justify-center items-start">
+                  {idx === 5 ? (
+                    <motion.h3
+                      className="mt-2 max-w-full text-xl md:text-6xl font-bold leading-tight"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: "-100px" }}
+                      variants={fadeUpVariants}
+                    >
+                      Doctor <br /> auto-assigned.
+                    </motion.h3>
+                  ) : (
+                    <motion.h3
+                      className="mt-2 max-w-[85%] text-xl md:text-6xl font-bold leading-tight"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: "-100px" }}
+                      variants={fadeUpVariants}
+                    >
+                      {feature.title}.
+                    </motion.h3>
+                  )}
                   <motion.p
                     className="mt-3 md:mt-4 max-w-[95%] text-base md:text-lg leading-relaxed text-[#ded6ff]/90"
                     initial="hidden"
@@ -817,14 +826,14 @@ export function QuicliLanding() {
         <div className="/container px-4 md:px-8 flex justify-center items-center flex-col">
           <div className="w-full flex justify-center items-center flex-col py-10 md:py-16">
             <motion.h2
-              className="section-title text-3xl md:text-5xl text-[#ded6ff] font-bold mb-4 md:mb-6 text-center "
+              className="section-title text-3xl md:text-6xl text-[#ded6ff] font-bold mb-4 md:mb-6 text-center "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              Doctor's Consultation now affordable for everyone. <br /> ₹99 /
-              consultation.
+              Doctor's Consultation <br /> now affordable for everyone. <br />{" "}
+              ₹99 / consultation.
             </motion.h2>
             {/* <motion.p
               className="section-copy text-xl md:text-2xl font-semibold text-[#ded6ff] text-center"
@@ -934,7 +943,7 @@ export function QuicliLanding() {
                 >
                   Quicli Pass lets you consult a doctor at just{" "}
                   <span className="font-semibold">₹99</span> all year round
-                  after a one-time purchase. Buy once, save on every
+                  after a one-time purchase of ₹199. Buy once, save on every
                   consultation.
                 </motion.p>
                 <hr className="my-4 md:my-6 border-white/30" />
@@ -982,7 +991,7 @@ export function QuicliLanding() {
           >
             What our users say
           </motion.h2>
-          <motion.p
+          {/* <motion.p
             className="section-copy mt-2 max-w-2xl text-base md:text-lg"
             initial="hidden"
             whileInView="visible"
@@ -990,7 +999,7 @@ export function QuicliLanding() {
             variants={fadeUpVariants}
           >
             Real stories from people who found care on Quicli.
-          </motion.p>
+          </motion.p> */}
         </div>
         <div className="testimonial-marquee-wrapper relative w-full overflow-hidden">
           <TestimonialMarquee testimonials={testimonials} />
@@ -1010,7 +1019,7 @@ export function QuicliLanding() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              Try Quicli on WhatsApp now.
+              Try Quicli now.
             </motion.h2>
             {/* <p>Send us a hi and start a consultation with a licensed doctor.</p> */}
             <motion.div
@@ -1027,7 +1036,7 @@ export function QuicliLanding() {
                   rel="noreferrer"
                 >
                   <img src="/whatsapp.png" className="w-6" alt="" />
-                  Try Quicli now!
+                  Send us a hi
                 </a>
               </Button>
             </motion.div>
@@ -1219,7 +1228,7 @@ export function QuicliLanding() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              L : Koramangala, Bangalore.
+              Location : Koramangala, Bangalore.
             </motion.p>
             <motion.p
               className="leading-relaxed"
@@ -1228,7 +1237,7 @@ export function QuicliLanding() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              M : +91 9886439401
+              Mobile : +91 9886439401
             </motion.p>
             <motion.p
               className="leading-relaxed"
@@ -1237,7 +1246,7 @@ export function QuicliLanding() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              E : admin@quicli.ai
+              Email : admin@quicli.ai
             </motion.p>
           </div>
         </div>
@@ -1278,7 +1287,7 @@ export function QuicliLanding() {
           className="flex cursor-pointer items-center gap-1.5 rounded-full border border-white/30 bg-theme/90 px-3 py-1.5 text-xs text-[#ded6ff]/90 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out hover:border-white/50 hover:text-[#ded6ff]"
         >
           <img src="/whatsapp.png" className="h-4 w-4" alt="" />
-          <span className="opacity-90">Consult on WhatsApp</span>
+          <span className="opacity-90">Consult on Quicli</span>
         </a>
         <div className="pointer-events-none absolute bottom-full right-0 mb-2 w-48 overflow-hidden rounded-xl border border-white/20 bg-theme/95 shadow-2xl opacity-0 translate-y-2 scale-95 transition-all duration-300 ease-out group-hover/corner:pointer-events-auto group-hover/corner:opacity-100 group-hover/corner:translate-y-0 group-hover/corner:scale-100 hidden md:block">
           <Image

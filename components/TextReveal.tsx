@@ -32,7 +32,7 @@ export default function Reveal() {
             />
             <TextReveal
               text={[
-                "Just share your symptoms",
+                "Just share your symptoms and",
                 "A real doctor will",
                 "send a prescription on",
                 "WhatsApp within 10 minutes",
