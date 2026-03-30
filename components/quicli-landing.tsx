@@ -8,6 +8,9 @@ import ScrollReveal from "./ScrollReveal";
 import Reveal from "./TextReveal";
 import {
   Hand,
+  Instagram as InstagramIcon,
+  Facebook as FacebookIcon,
+  Linkedin as LinkedinIcon,
   MessageSquare,
   UserPlus,
   ClipboardList,
@@ -37,6 +40,39 @@ const fadeUpVariants = {
 const fadeUpTransition = {
   duration: 0.6,
 };
+
+const contactSocialLinks = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/quicli.ai/",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61571117487744",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/112031771/",
+  },
+] as const;
+
+function SocialIcon({
+  network,
+  className,
+}: {
+  network: (typeof contactSocialLinks)[number]["name"];
+  className?: string;
+}) {
+  const cn = className ?? "size-7 md:size-8";
+  const Icon =
+    network === "Instagram"
+      ? InstagramIcon
+      : network === "Facebook"
+        ? FacebookIcon
+        : LinkedinIcon;
+
+  return <Icon className={cn} aria-hidden />;
+}
 
 const flowSteps = [
   {
@@ -679,7 +715,7 @@ export function QuicliLanding() {
           alt=""
         />
         <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-36 text-center font-bold">
-          Consultaions at the ease of a message
+          Consultations at the ease of a message
         </motion.div>
       </section>
       <section
@@ -1167,7 +1203,7 @@ export function QuicliLanding() {
             Quick answers to common questions about Quicli.
           </motion.p>
         </div>
-        <div className="/container max-w-3xl w-2/3">
+        <div className="/container max-w-3xl w-2/3 max-md:w-full">
           <div className="faq-list grid gap-4">
             {faqs.map((faq, idx) => (
               <motion.details
@@ -1198,7 +1234,7 @@ export function QuicliLanding() {
                     </span>
                   </span>
                 </summary>
-                <p className="mt-4 border-t border-[#e8e4f4] pt-4 text-base md:text-lg leading-relaxed text-[#4d546f]">
+                <p className="mt-4 border-t border-[#e8e4f4] pt-4 text-base md:text-lg leading-relaxed text-[#4d546f] ">
                   {faq.a}
                 </p>
               </motion.details>
@@ -1250,6 +1286,26 @@ export function QuicliLanding() {
               Email : admin@quicli.ai
             </motion.p>
           </div>
+          <motion.div
+            className="mt-10 flex flex-wrap items-center gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUpVariants}
+          >
+            {contactSocialLinks.map(({ name, href }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Quicli on ${name}`}
+                className="flex size-12 items-center justify-center rounded-full border border-[#ded6ff]/35 bg-[#ded6ff]/10 text-[#ded6ff] transition-colors hover:border-[#ded6ff]/60 hover:bg-[#ded6ff]/20 hover:text-white md:size-14"
+              >
+                <SocialIcon network={name} />
+              </a>
+            ))}
+          </motion.div>
         </div>
       </section>
 
